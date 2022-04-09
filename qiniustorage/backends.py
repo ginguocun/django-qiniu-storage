@@ -20,7 +20,7 @@ from django.core.files.storage import Storage
 from django.core.exceptions import ImproperlyConfigured, SuspiciousOperation
 try:
     from django.utils.encoding import force_text
-except ModuleNotFoundError:
+except ImportError:
     from django.utils.encoding import force_str as force_text
 from django.utils.encoding import force_bytes, filepath_to_uri
 from django.utils.deconstruct import deconstructible
